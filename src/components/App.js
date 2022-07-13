@@ -3,12 +3,20 @@ import '../styles/App.css';
 
 const App = () => {
 
-  let [count, setCount] = useState(0)
+  let [count, setCount] = useState(0);
+
+  const doubleClick = () => {
+    alert("cant edit it");
+  }
+
+  const incrementCounter = () => {
+    setCount(count + 1);
+  }
 
   return (
     <div class="ball">
-      <h1 class="count" ondoubleclick={() => { alert("cant edit it") }}>{count}</h1>
-      <button class='increment-button' onclick={() => { setCount(count + 1) }}>Increment</button>
+      <h1 class="count" ondoubleclick={doubleClick}>{count}</h1>
+      <button class='increment-button' onclick={incrementCounter}>Increment</button>
     </div>
   )
 }
