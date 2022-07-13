@@ -12,11 +12,14 @@ const App = () => {
   const incrementCounter = () => {
     setCount(count + 1);
   }
+  useEffect(() => {
+
+  }, [])
 
   return (
     <div class="ball">
-      <h1 class="count" ondoubleclick={doubleClick}>{count}</h1>
-      <button class='increment-button' onclick={incrementCounter}>Increment</button>
+      <h1 class="count" onDoubleClick={doubleClick}>{count}</h1>
+      <button class='increment-button' onClick={incrementCounter}>Increment</button>
     </div>
   )
 }
